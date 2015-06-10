@@ -37,8 +37,14 @@ class TestHex(unittest.TestCase):
         Test q2hex
         Any method which starts with ``test_`` will considered as a test case.
         """
-        result = rave_hexquant.q2hex(["TH","DBZH"])
-        self.assertEqual(result, '0x3')
+#        result = rave_hexquant.q2hex(["TH","DBZH"])
+        result = rave_hexquant.q2hex(["TH","DBZH","KDP","LDR","PHIDP"])
+        print result
+        self.assertEqual(result, '0x1c00003')
+    def test_hex2q(self)
+        rev_result = rave_hexquant.hex2q(result)
+        print rev_result 
+        self.assertEqual(rev_result, ['KDP', 'LDR', 'PHIDP', 'TH', 'DBZH'])
 
 
 if __name__ == '__main__':
